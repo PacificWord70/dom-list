@@ -26,8 +26,8 @@
 <h1>My List of Favorite Movies</h1>
     
     <section>
-        <div>
-            <form id="listForm">
+        <div class="card">
+            <form class="card-block"id="listForm">
                 <p>
                     <label for="movieTitle">Movie Title</label>
                     <input type="text" name="movieTitle">
@@ -37,14 +37,16 @@
                     <input type="number" name="movieYear">
                 </p>
                 <p>
-                    <button type="Submit">Go</button>
+                    <button type="Submit" class="btn btn-outline-info waves-effect">Go</button>
                 </p>
             </form>
         </div>
 
-        <div >
-            <p>Movie List:<br /></p>
-            <ul id="details"></ul>
+        <div class="card">
+            <div class="card-block">
+                <p>Movie List:<br /></p>
+                <ul id="details"></ul>
+            </div>
         </div>
 
     </section>

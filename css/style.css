@@ -1,1 +1,14 @@
 /* YOUR CUSTOM STYLES */
+
+body
+{
+    margin: auto;
+    width: 65%;
+    margin-top: 3rem;
+}
+
+div
+{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
