@@ -47,7 +47,7 @@ const item = document.createElement('div')
 function pressLove()
 {
     const item = document.querySelector('#love')
-    item.style.backgroundColor = '#F5EEF8'
+    item.style.backgroundColor = '#EBF5FB'
 }
 
 function pressRemove()
