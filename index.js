@@ -23,7 +23,7 @@ const item = document.createElement('div')
     `
         <div class="list-group">
             <div class="card-block">
-                 <p><strong>${movieTitle} (${movieYear})</strong></p>
+                 <p>${movieTitle} (${movieYear})</p>
                 <a href="http://www.imdb.com/find?ref_=nv_sr_fn&q=${titleWithDashes}&s=all">
                     <button type="button" class="btn btn-outline-info waves-effect">IMDB</button>
                 </a>
