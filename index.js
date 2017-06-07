@@ -18,12 +18,41 @@ function handleSubmit(ev)
     }
     titleWithDashes+=titleArray[i]
 
-details.appendChild(`
-<div class="list-group">
-    <a href="http://www.imdb.com/find?ref_=nv_sr_fn&q=${titleWithDashes}&s=all" class="list-group-item">${movieTitle} (${movieYear})</a>
-    <button type="Submit" class="btn btn-outline-info waves-effect">Go</button>
-</div>
-`)
+const item = document.createElement('div')
+    item.innerHTML=
+    `
+        <div class="list-group">
+            <div class="card-block">
+                 <p><strong>${movieTitle} (${movieYear})</strong></p>
+                <a href="http://www.imdb.com/find?ref_=nv_sr_fn&q=${titleWithDashes}&s=all">
+                    <button type="button" class="btn btn-outline-info waves-effect">IMDB</button>
+                </a>
+                <button id = "love" type="button" class="btn btn-outline-info waves-effect">love</button>
+                <button id = "remove" type="button" class="btn btn-outline-info waves-effect">Remove</button>
+            </div>
+        </div>
+    `
+
+    
+    details.insertBefore(item,details.childNodes[0])
+
+    document.querySelector('#love').addEventListener('click', pressLove)
+    document.querySelector('#remove').addEventListener('click', pressRemove)
+
+    f.movieTitle.value = ''
+    f.movieYear.value = ''
+
+}
+
+function pressLove()
+{
+    const item = document.querySelector('#love')
+    item.style.backgroundColor = '#F5EEF8'
+}
+
+function pressRemove()
+{
+    this.parentElement.remove(this.parentElement)
 }
 
 listForm.addEventListener('submit', handleSubmit)
