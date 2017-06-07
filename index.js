@@ -39,6 +39,9 @@ const item = document.createElement('div')
     document.querySelector('#love').addEventListener('click', pressLove)
     document.querySelector('#remove').addEventListener('click', pressRemove)
 
+    document.querySelector('#love').style.backgroundColor = 'white'
+    document.querySelector('#remove').style.backgroundColor = 'white'
+
     f.movieTitle.value = ''
     f.movieYear.value = ''
 
@@ -46,8 +49,13 @@ const item = document.createElement('div')
 
 function pressLove()
 {
-    const item = document.querySelector('#love')
-    item.style.backgroundColor = '#EBF5FB'
+    const item = this.parentElement.querySelector('#love')
+    if(item.style.backgroundColor != 'white')
+    {
+        item.style.backgroundColor = 'white'
+    } else {
+        item.style.backgroundColor = '#EBF5FB'
+    }
 }
 
 function pressRemove()
